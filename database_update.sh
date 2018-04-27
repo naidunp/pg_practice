@@ -1,3 +1,5 @@
+#!bin/bash
+
 ###Create Database With Shell Script
 
 # To create tables
