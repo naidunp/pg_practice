@@ -1,4 +1,4 @@
-#!bin/bash
+#!/bin/bash
 
 ###Create Database With Shell Script
 
