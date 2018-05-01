@@ -25,7 +25,7 @@ psql -d dris_demo -f /tmp/rename_table.sql
 echo "Table renamed"
 
 # SQL script to create table with partitions
-psql -d dris_demo - f /tmp/create_table_partition.sql
+psql -d dris_demo -f /tmp/create_table_partition.sql
 echo "Create table with partition"
 
 # SQL script to insert data from old table to new table
