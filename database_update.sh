@@ -9,6 +9,10 @@ psql -f /tmp/create_database.sql
 echo "DRIS database created"
 
 # SQL script to create schemas
+psql -d dris_demo -f /tmp/create_schema.sql
+echo "Schema created"
+
+# SQL script to create tables
 psql -d dris_demo -f /tmp/finalscript/Schema.sql
 echo "Schema created"
 
