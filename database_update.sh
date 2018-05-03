@@ -26,7 +26,7 @@ echo "Data inserted into database"
 
 # Copy table data to a CSV file
 
-psql -d dris_demo -c "Copy (select * from ""Patient"".""Demographics"") To STDOUT with CSV HEADER DELIMITER '|';" > /tmp/patient_demographics.csv
+psql -d dris_demo -c "Copy (select * from '"'Patient'"'.'"'Demographics'"') To STDOUT with CSV HEADER DELIMITER '|';" > /tmp/patient_demographics.csv
 echo "Patient Demographics CSV created"
 
 
@@ -39,7 +39,7 @@ psql -d dris_demo -f /tmp/create_table_partition.sql
 echo "Create table with partition"
 
 #importing data back from CSV files
-psql -d dris_demo -c "COPY ""Patient"".""Demographics"" From '/tmp/patient_demographics.csv' DELIMITER '|' CSV";
+psql -d dris_demo -c "COPY '"'Patient'"'.'"'Demographics'"' From '/tmp/patient_demographics.csv' DELIMITER '|' CSV";
 echo "Import data back"
 
 # SQL script to insert data from old table to new table
