@@ -24,6 +24,12 @@ echo "Schema created"
 psql -d dris_demo -f /tmp/insert_data.sql
 echo "Data inserted into database"
 
+# Copy table data to a CSV file
+
+psql -d dris_demo -c"Copy (select * from "Patient"."Demographics") To STDOUT with CSV HEADER DELIMITER '|';" > patient_demographics.csv
+echo "Patient Demographics CSV created"
+
+
 # SQL script to rename the existing database
 psql -d dris_demo -f /tmp/rename_table.sql
 echo "Table renamed"
