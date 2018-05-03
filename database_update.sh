@@ -17,8 +17,8 @@ psql -d dris_demo -f /tmp/finalscript/Schema.sql
 echo "Schema created"
 
 # SQL script to create tables - Without partitions
-psql -d dris_demo -f /tmp/create_demographics.sql
-echo "Demographics table created"
+#psql -d dris_demo -f /tmp/create_demographics.sql
+#echo "Demographics table created"
 
 # SQL script to add data into the database
 psql -d dris_demo -f /tmp/insert_data.sql
