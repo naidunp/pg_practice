@@ -26,7 +26,7 @@ echo "Data inserted into database"
 
 # Copy table data to a CSV file
 
-psql -d dris_demo -c"Copy (select * from "Patient"."Demographics") To STDOUT with CSV HEADER DELIMITER '|';" > patient_demographics.csv
+psql -d dris_demo -c"Copy (select * from "Patient"."Demographics") To STDOUT with CSV HEADER DELIMITER '|';" > /tmp/tempdata/patient_demographics.csv
 echo "Patient Demographics CSV created"
 
 
